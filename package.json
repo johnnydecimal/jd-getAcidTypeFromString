@@ -5,7 +5,8 @@
   "main": "./dist/jdGetAcidTypeFromString.js",
   "scripts": {
     "build": "tsc",
-    "test": "ts-mocha tests/**/*.test.ts"
+    "test": "ts-mocha tests/**/*.test.ts",
+    "watch": "ts-mocha tests/**/*.test.ts -w --watch-files '**/*.ts'"
   },
   "keywords": [],
   "author": "Johnny Noble",

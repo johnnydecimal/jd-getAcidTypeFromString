@@ -15,6 +15,8 @@ interface JDAcidType {
  * @returns "area" | "category" | "id" | `false`
  */
 export function jdGetAcidTypeFromString(jdString: string): JDAcidType {
+  jdString = jdString.trim();
+
   // Area
   if (/^\d\d-\d\d /.test(jdString)) {
     // Looks like an area
