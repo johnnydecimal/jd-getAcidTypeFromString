@@ -1,16 +1,22 @@
 {
-  "name": "jdgetacidtypefromstring",
+  "name": "jd-getacidtypefromstring",
   "version": "1.0.0",
-  "description": "",
+  "description": "Part of the Johnny.Decimal system. Given a one-line string, returns the JD ACID type for that string.",
   "main": "./dist/jdGetAcidTypeFromString.js",
   "scripts": {
     "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ts-mocha tests/**/*.test.ts"
   },
   "keywords": [],
   "author": "Johnny Noble",
-  "license": "ISC",
+  "license": "MIT",
   "devDependencies": {
+    "@types/chai": "^4.3.4",
+    "@types/mocha": "^10.0.1",
+    "chai": "^4.3.7",
+    "jest": "^29.4.1",
+    "mocha": "^10.2.0",
+    "ts-mocha": "^10.0.0",
     "typescript": "^4.9.4"
   }
 }
