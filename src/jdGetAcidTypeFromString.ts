@@ -17,7 +17,9 @@ interface JDAcidType {
 export function jdGetAcidTypeFromString(jdString: string): JDAcidType {
   jdString = jdString.trim();
 
-  // Area
+  /*****************************************************************************
+   * Check for an area match
+   */
   if (/^\d\d-\d\d /.test(jdString)) {
     // Looks like an area
     // 10-19
@@ -39,8 +41,25 @@ export function jdGetAcidTypeFromString(jdString: string): JDAcidType {
     }
   }
 
-  // Category
-  if (/^\d\d /.test(jdString)) return "category";
+  /*****************************************************************************
+   * Check for a category match
+   */
+  if (/^\d\d /.test(jdString)) {
+    return {
+      jdAcidType: "category",
+      strict: true,
+    };
+  }
+
+  /*****************************************************************************
+   * Check for an ID match
+   */
+  if (/^\d\d\.\d\d /.test(jdString)) {
+    return {
+      jdAcidType: "id",
+      strict: true,
+    };
+  }
 
   // Default. False = not a recognised type.
   return {

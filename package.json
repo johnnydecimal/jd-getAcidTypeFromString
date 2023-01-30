@@ -1,6 +1,6 @@
 {
-  "name": "jd-getacidtypefromstring",
-  "version": "1.0.0",
+  "name": "@johnnydecimal/jd-getacidtypefromstring",
+  "version": "0.0.1",
   "description": "Part of the Johnny.Decimal system. Given a one-line string, returns the JD ACID type for that string.",
   "main": "./dist/jdGetAcidTypeFromString.js",
   "scripts": {
